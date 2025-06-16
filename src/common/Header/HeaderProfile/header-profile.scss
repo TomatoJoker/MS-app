@@ -1,0 +1,32 @@
+@use "@/assets/styles/vars.scss" as *;
+@use "@/assets/styles/mixin.scss" as *;
+
+.header-profile {
+  position: relative;
+
+  &__avatar {
+    border-radius: 50%;
+    @include size(26);
+    background: silver;
+  }
+
+  &__menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    background: $dark-light;
+    padding: 16px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 32px 0 rgba($black, 0.1);
+    min-width: 300px;
+  }
+
+  &__menu-item {
+    padding: 8px 16px;
+    @include transition(background);
+
+    @include hover {
+      background: rgba($light, 0.1);
+    }
+  }
+}
